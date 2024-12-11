@@ -16,7 +16,7 @@ async function main() {
   const users: User[] = [
     {
       id: 1,
-      username: 'サンプルテスト001',
+      name: 'サンプルテスト001',
       email: 'sample01@example.com',
       password: hashedPassword,
       createdAt: currentDate,
@@ -24,7 +24,7 @@ async function main() {
     },
     {
       id: 2,
-      username: 'サンプルテスト002',
+      name: 'サンプルテスト002',
       email: 'sample02@example.com',
       password: hashedPassword,
       createdAt: currentDate,
@@ -32,7 +32,7 @@ async function main() {
     },
     {
       id: 3,
-      username: 'サンプルテスト003',
+      name: 'サンプルテスト003',
       email: 'sample03@example.com',
       password: hashedPassword,
       createdAt: currentDate,
@@ -40,7 +40,7 @@ async function main() {
     },
     {
       id: 4,
-      username: 'サンプルテスト004',
+      name: 'サンプルテスト004',
       email: 'sample04@example.com',
       password: hashedPassword,
       createdAt: currentDate,
@@ -48,7 +48,7 @@ async function main() {
     },
     {
       id: 5,
-      username: 'サンプルテスト005',
+      name: 'サンプルテスト005',
       email: 'sample05@example.com',
       password: hashedPassword,
       createdAt: currentDate,
