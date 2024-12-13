@@ -1,8 +1,8 @@
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
+import { TaskModule } from './task/task.module';
 
 @Module({
   imports: [
@@ -12,10 +12,11 @@ import { join } from 'path';
       playground: true,
       sortSchema: true,
     }),
-    ConfigModule.forRoot({
-      isGlobal: true, // ConfigModuleをグローバルにすることで、他のモジュールで再インポート不要
-      envFilePath: '.env', // デフォルトで'.env'を読み込むので省略可能
-    }),
+    TaskModule,
+    // ConfigModule.forRoot({
+    //   isGlobal: true, // ConfigModuleをグローバルにすることで、他のモジュールで再インポート不要
+    //   envFilePath: '.env', // デフォルトで'.env'を読み込むので省略可能
+    // }),
   ],
 })
 export class AppModule {}
