@@ -3,7 +3,6 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
 import { TaskModule } from './task/task.module';
-import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -14,7 +13,6 @@ import { AuthModule } from './auth/auth.module';
       sortSchema: true,
     }),
     TaskModule,
-    AuthModule,
     // ConfigModule.forRoot({
     //   isGlobal: true, // ConfigModuleをグローバルにすることで、他のモジュールで再インポート不要
     //   envFilePath: '.env', // デフォルトで'.env'を読み込むので省略可能
