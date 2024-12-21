@@ -12,7 +12,7 @@ services:
     environment:
       TZ: Asia/Tokyo # タイムゾーンを日本時刻に設定
     ports:
-      - 8080:3000
+      - 8000:3000
       - 5555:5555
     security_opt:
       - seccomp:unconfined
