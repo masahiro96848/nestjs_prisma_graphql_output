@@ -1,6 +1,6 @@
 import { Args, Int, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { TaskService } from './task.service';
-import { Task as TaskModel } from './task.model';
+import { Task as TaskModel } from './models/task.model';
 import { CreateTaskInput } from './dto/createTask.input';
 import { Task } from '@prisma/client';
 
