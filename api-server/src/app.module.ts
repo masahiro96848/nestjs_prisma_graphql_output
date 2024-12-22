@@ -5,6 +5,7 @@ import { join } from 'path';
 import { TaskModule } from './task/task.module';
 import { ConfigModule } from '@nestjs/config';
 import { PrismaModule } from './prisma/prisma.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -19,6 +20,7 @@ import { PrismaModule } from './prisma/prisma.module';
       envFilePath: '.env', // デフォルトで'.env'を読み込むので省略可能
     }),
     PrismaModule,
+    UserModule,
   ],
 })
 export class AppModule {}

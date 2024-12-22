@@ -21,6 +21,7 @@ model User {
   password String @db.VarChar(255)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  task Task[]
 }
 
 model Task {
@@ -29,4 +30,6 @@ model Task {
   description String @db.VarChar(255)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  userId Int
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
