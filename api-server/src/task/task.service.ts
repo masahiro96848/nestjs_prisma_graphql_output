@@ -8,16 +8,21 @@ import { Task } from '@prisma/client';
 export class TaskService {
   constructor(private readonly prismaService: PrismaService) {}
 
-  async getTasks(): Promise<Task[]> {
-    return await this.prismaService.task.findMany();
+  async getTasks(userId: number): Promise<Task[]> {
+    return await this.prismaService.task.findMany({
+      where: {
+        userId,
+      },
+    });
   }
 
   async createTask(createTaskInput: CreateTaskInput): Promise<Task> {
-    const { name, description } = createTaskInput;
+    const { name, description, userId } = createTaskInput;
     return await this.prismaService.task.create({
       data: {
         name,
         description,
+        userId,
       },
     });
   }
